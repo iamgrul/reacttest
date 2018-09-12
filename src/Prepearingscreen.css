@@ -1,0 +1,73 @@
+.Prepearingscreen {
+    background: white;
+    padding: 50px;
+    position: absolute;
+    z-index: 2;
+
+    border: 1px solid grey;
+    border-radius: 100px;
+    top:25%;
+    left:calc(35% - 50px);
+    width: 30%;
+    height:  30%;
+
+    animation-delay: var(--anim-sec);
+    animation-name: Prepearingscreen-hide;
+    animation-duration: 1s ;
+    animation-fill-mode: forwards ;
+    opacity: 1;
+
+
+    /*animation-iteration-count: infinite;*/
+
+}
+.Prepearingscreen  .counter:before {
+    position: relative;
+    animation-name: Prepearingscreen-count;
+    animation-duration: var(--anim-sec) ;
+    animation-fill-mode: forwards ;
+    /*animation-iteration-count: infinite;*/
+    font-size: 48px;
+    content: '5';
+}
+
+@keyframes Prepearingscreen-count {
+
+    20% {
+        content: '4';
+    }
+    40% {
+        content: '3';
+    }
+    60% {
+        content: '2';
+    }
+    80% {
+        content: '1';
+    }
+    to {
+        content: '0';
+    }
+}
+
+@keyframes Prepearingscreen-hide {
+
+    80% {
+        top: 10%;
+        left: 10%;
+        width: calc(80% - 100px);
+        height: calc(80% - 100px);
+    }
+    90% {
+
+
+    }
+    to {
+        top: 10%;
+        left: -100%;
+        width: calc(80% - 100px);
+        height: calc(80% - 100px);
+        opacity: 0;
+    }
+}
+

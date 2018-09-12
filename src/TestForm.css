@@ -1,0 +1,28 @@
+.TestForm {
+    background: white;
+    padding: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 10%;
+    width: calc(80% - 100px);
+    height: calc(80% - 100px);
+    border: 1px solid grey;
+    border-radius: 100px;
+    animation-name: TestForm-show;
+    animation-delay: var(--anim-sec);
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.TestForm input{
+    height: 20px;
+}
+.TestForm button {
+    padding: 4px 14px;
+}
+@keyframes TestForm-show  {
+    to {
+        opacity: 1;
+    }
+}
