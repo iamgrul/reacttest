@@ -24,7 +24,7 @@ class TestForm extends Component {
 
         arr = this.state.inputstr.split(' ');
         for(let i = 0; i < arr.length; i++) {
-            if (arr[i].length !== 0 && !isNaN(arr[i]))
+            if (arr[i].length !== 0 && !isNaN(arr[i]) && parseInt(arr[i], 10) > 0)
                 sum += parseInt(arr[i], 10);
         }
 
@@ -65,7 +65,7 @@ class TestForm extends Component {
 
         return (
             <div className="TestForm">
-                <h2>Insert numbers devided by space and press the button</h2>
+                <h2>Insert positive numbers devided by space and press the button</h2>
                     <div>
                     <input
                         type="text"
